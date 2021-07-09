@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Grid Reference
+Open [https://codesandbox.io/s/cbs-grid-gtvke?file=/css/grid.css](Code Sandbox grid example) to view it in the browser.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,0 +1,44 @@
+type Query{
+    users(id:ID):[User]!
+    products(id:ID):[Product]!
+    carts(id:ID):[Cart]!
+    payments(id:ID):[Payment]!
+}
+
+type Mutation{
+    AddUser(userName:String!,password:String!,name:String!):User!
+    AddToCart(productID:ID!,userID:ID!):Cart!
+    DeleteFromCart(productID:ID!,userID:ID!):Cart!
+    MakePayment(cartID:ID!,userID:ID!):Payment!
+}
+
+type User{
+    id:ID!
+    userName:String!
+    password:String
+    name:String!
+    cart:Cart!
+    payment:Payment
+}
+
+type Product{
+    id:ID!
+    name:String!
+    price:Float!
+    description:String
+    cart:Cart
+    payment:[Payment]
+}
+
+type Cart{
+    id:ID!
+    products:[Product]
+    user:User!
+}
+
+type Payment{
+    id:ID!
+    user:User!
+    amount:Int!
+    products:[Product!]
+}

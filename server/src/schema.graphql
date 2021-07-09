@@ -17,27 +17,25 @@ type User{
     userName:String!
     password:String
     name:String!
-    cart:Cart!
+    cart:Cart
     payment:Payment
 }
 
 type Product{
-    id:ID!
+    id:ID
     name:String!
     price:Float!
     description:String
-    cart:Cart
-    payment:[Payment]
 }
 
 type Cart{
-    id:ID!
+    id:ID
     products:[Product]
     user:User!
 }
 
 type Payment{
-    id:ID!
+    id:ID
     user:User!
     amount:Int!
     products:[Product!]
